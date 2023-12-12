@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: coffeeshop
-          image: ashishpradhan92/cnb:70
+          image: ashishpradhan92/cnb:71
           imagePullPolicy: Always
           ports:
             - containerPort: 80  # Adjust the container port as needed
