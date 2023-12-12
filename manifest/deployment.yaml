@@ -1,9 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: coffeeshop-deployment
+  name: coffeeshop
 spec:
-  replicas: 1  # Adjust the number of replicas as needed
   selector:
     matchLabels:
       app: coffeeshop
@@ -12,9 +11,13 @@ spec:
       labels:
         app: coffeeshop
     spec:
+      terminationGracePeriodSeconds: 5
       containers:
-        - name: coffeeshop
-          image: ashishpradhan92/cnb:71
-          imagePullPolicy: Always
-          ports:
-            - containerPort: 80  # Adjust the container port as needed
+      - name: server
+        image: ashishpradhan92/cnb:71
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
