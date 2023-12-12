@@ -12,10 +12,9 @@ spec:
       labels:
         app: coffeeshop
     spec:
-      imagePullSecrets:
-        - name: docker-secret
       containers:
         - name: coffeeshop
           image: ashishpradhan92/cnb:65
+          imagePullPolicy: Always
           ports:
             - containerPort: 80  # Adjust the container port as needed
