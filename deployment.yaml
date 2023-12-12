@@ -16,6 +16,6 @@ spec:
         - name: docker-secret
       containers:
         - name: coffeeshop
-          image: ashishpradhan92/cnb
+          image: ashishpradhan92/cnb:65
           ports:
             - containerPort: 80  # Adjust the container port as needed
