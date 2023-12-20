@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: coffeeshop-app
-        image: ashishpradhan92/cnb:81
+        image: ashishpradhan92/cnb:82
         ports:
         - containerPort: 8083
         imagePullPolicy: Always
